@@ -1,0 +1,3 @@
+Some functions were taking from SAIT's StandardFunctions library, the rest are original from me
+
+Image credits go to https://www.pexels.com/ and https://www.cleanpng.com

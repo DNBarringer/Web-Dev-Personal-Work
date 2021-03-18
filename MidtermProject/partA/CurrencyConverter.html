@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Currency Converter</title>
+    <link href="CurrencyConverter.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="CurrencyConverter.js"></script>
+</head>
+
+<body>
+
+    <h1>Currency Converter</h1>
+
+    <div class="converter-wrapper">
+        <div class="converter-input">
+            <label for="currencyAmount">Amount</label>
+            <input type="number" id="currencyAmount" min="0" value="0" onchange="updatePage()">
+        </div>
+
+        <div class="converter-side-a">
+            <form id="convertFromOptions">
+                <label for="menu_A">Convert From</label>
+                <select id="menu_A" onchange="updatePage()">
+                    <option>Euro</option>
+                    <option>US Dollar</option>
+                    <option>Canadian Dollar</option>
+                    <option>Bitcoin Digital Currency</option>
+                    <option>Ethereum Digital Currency</option>
+                </select>
+        </div>
+ 
+        <div class="converter-side-b">
+            <label for="menu_B">Convert To</label>
+            <select id="menu_B" onchange="updatePage()">
+                <option>Euro</option>
+                <option>US Dollar</option>
+                <option>Canadian Dollar</option>
+                <option>Bitcoin Digital Currency</option>
+                <option>Ethereum Digital Currency</option>
+            </select>
+            </form>
+        </div>
+    </div>
+
+    <div class="converter-output" id="converter-output"></div>
+
+    <div class="footer">
+        <p>These conversion rates were last updated on <strong>March 10, 2021</strong></p>
+    </div>
+</body>
+
+</html>

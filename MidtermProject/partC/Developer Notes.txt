@@ -1,0 +1,9 @@
+Some functions were taking from SAIT's StandardFunctions library, the rest are original from me
+
+I could not get my prices to match up exactly with the documents.
+In the assignment it says "Cost of first layer is 549 x 0.02 = 10.98 + $15 = 25.98. The additional layer is 12.99 for a total of $38.98"
+So there must be some rounding that is not shown.
+My program only rounds the cake area down to the nearest integer as shown in the document, and rounds the final cake price to 2 signifigant digits.
+
+image credit goes to pexels
+https://images.pexels.com/photos/3713892/pexels-photo-3713892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260

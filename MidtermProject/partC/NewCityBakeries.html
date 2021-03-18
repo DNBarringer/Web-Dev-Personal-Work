@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New City Bakeries</title>
+    <link href="NewCityBakeries.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="NewCityBakeries.js"></script>
+</head>
+
+<body>
+    <h2>Come visit us at <strong>1234 Easy Avenue, Wonderland Alberta, Canada.</strong> Contact us at <strong>403-555-6789</strong>, or at <strong>newcitybakeries@email.com</strong></h2>
+    <h1>New City Bakeries</h1>
+    
+
+
+    <div id="formWrapper" class="center">
+        <div class="background">
+            <form onsubmit="CalculateOrder(); return false;">
+                <p><strong>Please enter the following information:</strong></p>
+                <label for="firstname" class="form-label required">First Name:</label><br>
+                <input type="text" id="firstname" name="firstname" size="25" placeholder="Your first name"
+                    pattern="[A-Za-z]{1,25}"
+                    title="Please enter your first name, up to 25 characters from A-Z"
+                    oninvalid="this.setCustomValidity('Please enter your first name, up to 25 characters from A-Z')"
+                    oninput="this.setCustomValidity('')"
+                    required autofocus>
+                <br><br>
+
+
+                <label for="lastname" class="form-label required">Last Name:</label><br>
+                <input type="text" id="lastname" name="lastname" size="25" placeholder="Your last name"
+                    pattern="[A-Za-z]{1}[A-Za-z \-]{1,24}"
+                    title="Please enter your surname name, up to 25 characters from A-Z including \ and -"
+                    oninvalid="this.setCustomValidity('Please enter your surname name, up to 25 characters from A-Z including \ and -')"
+                    oninput="this.setCustomValidity('')"
+                    required>   
+                <br><br>
+
+                <label for="address" class="form-label required">Street Address:</label><br>
+                <input type="text" id="address" name="address" placeholder="Your street address" max="40"
+                    title="Please enter your address (e.g. 123 Easy Street)"
+                    oninvalid="this.setCustomValidity('Please enter your address (e.g. 123 Easy Street)')"
+                    oninput="this.setCustomValidity('')"
+                    required>
+                <br><br>
+
+                <label for="postalcode" class="form-label required">Postal Code:</label><br>
+                <input type="text" id="postalcode" name="postalcode" placeholder="A1A 1A1"
+                    pattern="[ABCEGHJKLMNPRSTVXY]{1}[0-9]{1}[ABCEGHJKLMNPRSTVWXYZ]{1}[ ]{0,1}[0-9]{1}[ABCEGHJKLMNPRSTVWXYZ]{1}[0-9]{1}"
+                    title="Please enter your postal code in the format A1A1A1"
+                    oninvalid="this.setCustomValidity('Please enter your postal code in the format A1A1A1')"
+                    oninput="this.setCustomValidity('')"
+                    required>
+                <br><br>
+
+                <label for="phone" class="form-label required">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="xxx-xxx-xxxx"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    title="Please enter a valid phone number with area code in the format xxx-xxx-xxxx"
+                    oninvalid="this.setCustomValidity('Please enter a valid phone number with area code in the format xxx-xxx-xxxx')"
+                    oninput="this.setCustomValidity('')"
+                    required>
+                <br><br>
+
+
+                <label for="email" class="form-label required">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="username@domain.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Please enter your email address (e.g. username@domain.com"
+                    oninvalid="this.setCustomValidity('Please enter your email address (e.g. username@domain.com)')"
+                    oninput="this.setCustomValidity('')"
+                    required>
+                <br><br>
+
+                <div id="CakeType">
+                    <label class="form-label required">Cake Type:</label><br>
+                    <input type="radio" id="sheet" name="CakeType" value="Sheet" required onchange="CakeChoice(sheet)">
+                    <label for="sheet">Sheet Cake</label><br>
+                    <input type="radio" id="round" name="CakeType" value="Round" required onchange="CakeChoice(round)">
+                    <label for="round">Round Cake</label><br>
+                </div>
+                <br><br>
+
+                <div id="CakeDimensions"></div>
+                <br><br>
+
+                <div id="CakeLayers">
+                    <label class="form-label required">How many layers?</label><br>
+                    <input type="radio" id="OneLayer" name="CakeLayers" value="1 layer" required>
+                    <label for="OneLayer">One Layer</label><br>
+                    <input type="radio" id="TwoLayers" name="CakeLayers" value="2 layers" required>
+                    <label for="TwoLayers">Two Layers</label><br>
+                    <input type="radio" id="ThreeLayers" name="CakeLayers" value="3 layers" required>
+                    <label for="ThreeLayers">Three Layers</label><br>
+                </div>
+                <br><br>
+
+                <div id="AdditionalChoices">
+                    <label>Additional Choices:</label><br>
+                    <input type="checkbox" id="Additional-CreamCheese" name="AdditionalChoice"
+                        value="Cream Cheese icing">
+                    <label for="Additional-CreamCheese">Cream Cheese icing $5</label><br>
+                    <input type="checkbox" id="Additional-FruitAndAlmond" name="AdditionalChoice"
+                        value="Fruit and Almond topping">
+                    <label for="Additional-FruitAndAlmond">Fruit and Almond topping $7</label><br>
+                    <input type="checkbox" id="Additional-FruitJam" name="AdditionalChoice"
+                        value="Fruit Jam filling">
+                    <label for="Additional-FruitJam">Fruit jam filling between layers $4</label><br>
+                </div>
+                <br><br>
+
+                <div id="button-area">
+                    <input type="submit" id="btn-submit" value="Submit">
+                    <input type="reset" id="btn-clear" value="Clear">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div id="invoice"></div>
+
+</body>
+
+</html>

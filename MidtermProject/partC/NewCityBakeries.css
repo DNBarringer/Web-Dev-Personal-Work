@@ -1,0 +1,70 @@
+body {
+    background-color: aquamarine;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* image credit to https://images.pexels.com */
+.center {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    content: normal;
+    position: relative; 
+    margin: auto;
+    width: max-content;
+    display: block;
+    border: 20px solid transparent;
+    border-image: url(https://images.pexels.com/photos/3713892/pexels-photo-3713892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) round;
+    border-image-slice: 5%;
+    padding: 10px;
+
+}
+
+
+h1 {
+    position: relative;
+    font-size: 12rem;
+    line-height: 0.9;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.required::after {
+    content: "*";
+    color: red;
+}
+
+#invoice {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: azure;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    padding-bottom: 25px;
+}
+
+#invoice:empty {
+    display: none;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}

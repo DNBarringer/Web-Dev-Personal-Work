@@ -1,0 +1,4 @@
+Some functions were taking from SAIT's StandardFunctions library, the rest are original from me
+
+
+Conversion rates were gotten from https://finance.yahoo.com/ and xe.com on March 10, 2021
