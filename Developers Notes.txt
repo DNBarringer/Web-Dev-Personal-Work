@@ -1,0 +1,15 @@
+@author David Barringer
+@date 03-24-2021
+
+Some functions were taken from StandardJSFunctions.js, provided by the instructor.
+Some code (HTML,CSS,JS) was adapted from w3schools.com
+
+https://www.w3schools.com/html/html_tables.asp
+
+Image zoom and transition was adapted from https://w3bits.com/css-image-hover-zoom/
+
+------------------
+This assignment used many techniques previously used from other assignments in this class.
+My CalculateOrder() was adapted from my CakeOrderForm in partC of the midterm project.
+
+For PartA, the architect biographies, I opted to make my image zoom 50% instead of 25% to make it look better since the images were small to begin with.
