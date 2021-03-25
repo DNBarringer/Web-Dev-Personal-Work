@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Western Valley Farms</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+
+    <header><h1>Western Vally Farms</h1></header>
+
+    <div id="contentWrapper">
+        <div class="center">
+            <form id="order-form" onsubmit="CalculateOrder();return false">
+
+                <div id="clientinfo">
+                    <label for="clientname" class="form-label required">Client Name</label><br>
+                    <input type="text" id="clientname" name="clientname" placeholder="Client Name" required
+                        data-helpMsg="Please enter the client's name, up to 40 characters from A-Z"
+                        onfocus="HasFocus(this.id,'help-clientname')" onblur="LostFocus(this.id,'help-clientname')"
+                        pattern="[A-Za-z]{1}[A-Za-z \-]{1,39}" required>
+                    <span id="help-clientname" class="helper-popup hidden">Please enter the client's name, up to 40
+                        characters from A-Z including - and \</span>
+
+                    <br><br>
+
+                    <label for="address" class="form-label  required">Street Address:</label><br>
+                    <input type="text" id="address" name="address" placeholder="Client street address" required
+                        title="Please enter your street address" onfocus="HasFocus(this.id,'help-address')"
+                        onblur="LostFocus(this.id,'help-address')">
+                    <span id="help-address" class="helper-popup hidden">Please enter your street address</span>
+
+                    <br><br>
+
+                    <label for="postalcode" class="form-label  required">Postal Code:</label><br>
+                    <input type="text" id="postalcode" name="postalcode" placeholder="A1A 1A1" required
+                        pattern="[ABCEGHJKLMNPRSTVXY]{1}[0-9]{1}[ABCEGHJKLMNPRSTVWXYZ]{1}[ ]{0,1}[0-9]{1}[ABCEGHJKLMNPRSTVWXYZ]{1}[0-9]{1}"
+                        title="Please enter your postal code in the format A1A1A1"
+                        onfocus="HasFocus(this.id,'help-postalcode')" onblur="LostFocus(this.id,'help-postalcode')">
+                    <span id="help-postalcode" class="helper-popup hidden">Please enter your postal code in the format
+                        A1A1A1</span>
+
+                    <br><br>
+
+                    <label for="phone" class="form-label  required">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Client phone number" required
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        title="Please enter a valid phone number with area code in the format xxx-xxx-xxxx"
+                        onfocus="HasFocus(this.id,'help-phone')" onblur="LostFocus(this.id,'help-phone')">
+                    <span id="help-phone" class="helper-popup hidden">Please enter a valid phone number with area code
+                        in
+                        the format xxx-xxx-xxxx</span>
+
+                    <br><br>
+
+                    <div id="PhoneType">
+                        <label class="form-label  required">Phone Number Type</label><br>
+                        <input type="radio" id="business" name="phoneNumberType" value="business" required>
+                        <label for="business">Business</label><br>
+                        <input type="radio" id="personal" name="phoneNumberType" value="personal" required>
+                        <label for="personal">Personal</label><br>
+                    </div>
+
+                    <br>
+
+                    <label for="email" class="form-label required">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter your email address"
+                        onfocus="HasFocus(this.id,'help-email')" onblur="LostFocus(this.id,'help-email')">
+                    <span id="help-email" class="helper-popup hidden">Please enter a valid email address (e.g.
+                        username@domain.com)</span><br>
+
+                    <br>
+
+                    <div id="DeliveryType">
+                        <label class="form-label required">Pickup or Delivery</label><br>
+                        <input type="radio" id="pickup" name="DeliveryType" value="pickup" required>
+                        <label for="pickup">Pickup</label><br>
+                        <input type="radio" id="delivery" name="DeliveryType" value="delivery" required>
+                        <label for="delivery">Delivery</label><br>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div id="orderselection">
+                    <h2>Order Selection</h2>
+                    <label for="vegetablehamper">Vegetable Hamper</label><br>
+                    <label for="vegetablehamper">20kg: $30.00 each</label><br>
+                    <input type="number" id="vegetablehamper" name="vegetablehamper" value="0" min="0" max="99" step="1"
+                        pattern="[0-9]"><br><br>
+                    <label for="fruithamper">Fruit Hamper</label><br>
+                    <label for="fruithamper">10kg: $20.00 each</label><br>
+                    <input type="number" id="fruithamper" name="fruithamper" value="0" min="0" max="99" step="1"
+                        pattern="[0-9]"><br><br>
+                    <label for="freshchickens">Fresh Chickens</label><br>
+                    <label for="freshchickens">1.2kg: $4 each</label><br>
+                    <input type="number" id="freshchickens" name="freshchickens" value="0" min="0" max="99" step="1"
+                        pattern="[0-9]"><br><br>
+                    <label for="pork">Pork</label><br>
+                    <label for="pork">$5/kg</label><br>
+                    <input type="number" id="pork" name="pork" value="0" min="0" max="99" step="1"
+                        pattern="[0-9]"><br><br>
+                </div>
+
+
+                <div id="button-area">
+                    <input type="submit" id="btn-submit" value="Submit">
+                    <input type="reset" id="btn-clear" value="Clear">
+                </div>
+
+            </form>
+        </div>
+        <br><br>
+
+        <div id="invoice"></div>
+    </div>
+
+
+</body>
+
+</html>
